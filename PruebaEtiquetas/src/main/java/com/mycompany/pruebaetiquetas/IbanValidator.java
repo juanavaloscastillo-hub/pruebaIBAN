@@ -23,4 +23,11 @@ public class IbanValidator {
             } else {
                 System.out.println("❌ El IBAN no es válido.");
             }
+            System.out.print("¿Quieres validar otro IBAN? (s/n): ");
+            respuesta = sc.nextLine().trim().toLowerCase();
+        } while (respuesta.equals("s") || respuesta.equals("si") || respuesta.equals("sí"));
+
+        System.out.println("¡Gracias por usar el validador de IBAN!");
+        sc.close();
+    }
 }
